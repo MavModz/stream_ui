@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { auth, provider } from "../../firebase";
 import { signInWithPopup } from 'firebase/auth';
-import Dashboard from "../../Dashboard/Dashboard"
+import Dashboard from "../Dashboard/Dashboard"
 
 function Login() {
 
