@@ -1,0 +1,129 @@
+:root {
+    --sidebar-light: #215273;
+    --sidebar-dark: #010C14;
+    --sidebar-bottom-light: #376B8E;
+    --sidebar-bottom-dark: #374f5f;
+    --border: #7CE395;                
+    --main-body-light: #F4FBFF;
+    --main-body-dark:#05243A;
+  }
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../Components/assets/bg-img.jpg"), linear-gradient(62deg, rgba(24, 18, 18, 0.658) 0 60%, rgba(230, 230, 230, 0.507) 60% 100%);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+.header{
+    
+    display: grid;
+    grid-template-columns: 22% 78%;    
+}
+.logo > img{
+    margin: 25px 20px 0px 50px  ;
+}
+
+.navbar{
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 25px;
+     
+}
+.menulist>.lists{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black; 
+}
+
+.payloader {
+    width: 40vw;
+    height: 85vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading > h1{
+    font-size: 3.6rem;
+    margin-top: -30px;
+}
+.heading > p{
+    font-size: 20px;
+    color: white;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+
+.field > .emailid > input[type=email]{
+    width:25rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius:  9px;
+    font-size: 20px;
+    margin-top: 45px;
+}
+.field > .password > input[type=password]{
+    width:25rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius:  9px;
+    font-size: 20px;
+    margin-top: 15px;    
+}
+.forgot{
+    float : right ;
+}
+
+#forgotp{
+    text-decoration: none;
+    color: white;
+    font-size:20px
+
+}
+
+.or{
+    margin: 30px 0 0 0 ;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+
+.or:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #000;
+    left: 120px;
+    top: 50%;
+    position: absolute;
+  }
+  
+  .or:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #000;
+    right: 120px;
+    top: 50%;
+    position: absolute;
+  }
+.login-with-google > #google{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.login-button > input[type=submit]{
+    width:25rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius:  30px;
+    font-size: 20px;
+    background-color: var(--sidebar-bottom-dark);
+    cursor: pointer;
+    margin: 20px 0 20px 0;    
+}
