@@ -1,3 +1,12 @@
+:root {
+  --sidebar-light: #215273;
+  --sidebar-dark: #010C14;
+  --sidebar-bottom-light: #376B8E;
+  --sidebar-bottom-dark: #374f5f;
+  --border: #7CE395;                
+  --main-body-light: #F4FBFF;
+  --main-body-dark:#05243A;
+}
 .App {
   text-align: center;
 }
