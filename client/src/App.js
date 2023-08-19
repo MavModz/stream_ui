@@ -1,9 +1,15 @@
+import {Routes, Route} from "react-router-dom";
+import Login from "./pages/Login/Login";
+import Dashboard from "./Dashboard/Dashboard";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <Routes>
+        <Route path="/" Component={Login}/>
+        <Route path="/dashboard" Component={Dashboard}/>
+      </Routes>
     </div>
   );
 }
