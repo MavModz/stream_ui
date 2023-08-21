@@ -12,22 +12,14 @@
 .register-container {
     width: 100vw;
     height: 100vh;
-    background-color: var(--main-body-light);
-}
-
-.register-wrapper {
-    display: flex;
-    text-align: center;
-    margin: 20px 20px;
-}
-
-.left-wrapper {
     background: var(--main-body-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100%;
+}
+
+.left-container {
+    background: var(--main-body-dark);
+}
+.register-wrapper > span, h1 {
+    color: var(--background-white);
 }
 
 .form-wrapper {
@@ -35,27 +27,26 @@
     flex-direction: column;
     position: relative;
     gap: 30px;
-    background-color: var(--background-white);
+    background-color: var(--main-body-dark);
     border: 1px solid var(--main-body-dark);
     border-radius: 16px;
     box-shadow: var(--box-shadow);
     min-width: 280px;
     max-width: 100%;
-    width: 100%;
-    padding: 32px;
-    margin: 0 32px;
+    margin-top: 5rem;
 }
 
 .text-field input {
-    color: var(--main-body-dark);
+    color: var(--background-white);
     font-size: 1rem;
     font-weight: 500;
-    max-width: 100%;
+    max-width: 30%;
     width: 100%;
-    border: 1.5px solid var(--main-body-dark);
+    /* width: 100%; */
+    border: 1.5px solid var(--sidebar-bottom-dark);
     height: 50px;
     letter-spacing: .03rem;
-    background-color: transparent;
+    background-color: var(--sidebar-bottom-dark);
     outline: none;
     transition: .25s;
     border-radius: 15px;
@@ -63,7 +54,7 @@
     margin-top: 8px;
 }
 
-.right-wrapper {
-    width: 100vw;
-    height: 90vh;
+.text-field input::placeholder {
+    color: var(--main-body-light);
+    font-size: 14px;
 }
