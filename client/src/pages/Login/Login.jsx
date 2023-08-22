@@ -7,7 +7,7 @@ import logo from "../../Components/assets/logo.png";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import GoogleButton from 'react-google-button';
-import googleicon from "../../Components/assets/google.svg"
+// import googleicon from "../../Components/assets/google.svg"
 
 const Login = () => {
     const [email, setEmail] = useState('');

@@ -11,7 +11,7 @@
 .container{
     width: 100vw;
     height: 100vh;
-    background-image: url("../../Components/assets/bg-img.jpg"), linear-gradient(62deg, rgba(24, 18, 18, 0.658) 0 60%, rgba(230, 230, 230, 0.507) 60% 100%);
+    background-image: url("../../Components/assets/bg-image2.jpg");
     background-size: cover;
     background-blend-mode: overlay;
 }
@@ -39,23 +39,31 @@
 }
 
 .payloader {
-    width: 40vw;
-    height: 85vh;
+    background-color: #706c6c6e;
+    border-radius: 20px;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 30vw;
+    height: 75vh;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.heading{
+    text-align: center;
+}
+
 .heading > h1{
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-top: -30px;
 }
 .heading > p{
     font-size: 20px;
     color: white;
     margin-top: -20px;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .field > .emailid > input[type=email]{
@@ -76,12 +84,14 @@
 }
 .forgot{
     float : right ;
+    margin-top: 5px;
+
 }
 
 #forgotp{
     text-decoration: none;
     color: white;
-    font-size:20px
+    font-size:18px
 
 }
 
@@ -120,10 +130,19 @@
 .login-button > input[type=submit]{
     width:25rem;
     height: 3rem;
-    border: 1px solid white;
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius:  30px;
     font-size: 20px;
-    background-color: var(--sidebar-bottom-dark);
+    background-color: #115AF2;
     cursor: pointer;
     margin: 20px 0 20px 0;    
+}
+.login-button > input[type=submit]:hover{
+    /* box-shadow: inset -4px -7px 9px rgb(0 0 0 / 1); */
+    transition : all ease 0.3s;
+    background-color: #cc4545c0;
+  
+}
+.singin{
+    text-align: right;
 }
