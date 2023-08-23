@@ -1,28 +1,35 @@
 import React from 'react';
-import "./Register.css"
+import { User, Mail, Fingerprint } from 'lucide-react';
+import "./Register.css";
 
 function Register() {
     return (
         <div className="register-container">
-            <div className="register-wrapper">
-                <div className="left-wrapper">
-                    <span>Start For Free</span>
-                    <h1>Create a New Account</h1>
-                    <span>Already a Member</span>
-                    <form className='form-wrapper'>
-                        <div className="text-field">
-                            <input type="text" name="fname" id="fna
-                            
-                            me" placeholder='First Name' />
-                            <input type="text" name="lname" id="lname" placeholder='Last Name' />
+            <div className="register-main">
+                <div className="register-wrapper">
+                    <span>START FOR FREE</span>
+                    <h1>Create new account  </h1>
+                    <span>Already A Member?</span>
+                    <div className="form-wrapper">
+                        <div className="text-row">
+                            <div className="text-field">
+                                <input type="text" name="fname" id="fname" placeholder='First Name' />
+                                <User size={32} color="#7CE395" strokeWidth={1.5} />
+                            </div>
+                            <div className="text-field">
+                                <input type="text" name="fname" id="fname" placeholder='Last Name' />
+                                <User size={32} color="#7CE395" strokeWidth={1.5} />
+                            </div>
                         </div>
-                        <div className="text-field">
+                        <div className="text-field column">
                             <input type="email" name="email" id="email" placeholder='Email' />
+                            <Mail size={32} color="#7CE395" strokeWidth={1.5} />
                         </div>
-                        <div className="text-field">
+                        <div className="text-field column">
                             <input type="password" name="password" id="password" placeholder='Password' />
+                            <Fingerprint size={32} color="#7CE395" strokeWidth={1.5} />
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,46 +15,85 @@
     background: var(--main-body-dark);
 }
 
-.left-container {
-    background: var(--main-body-dark);
+.register-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
+
+.register-wrapper {
+    min-width: 400px;
+    max-width: 500px;
+    width: 100%;
+    padding: 32px;
+    margin-left: 3rem;
+}
+
 .register-wrapper > span, h1 {
     color: var(--background-white);
+    padding: 10px 0px;
+}
+
+.text-field {
+    position: relative;
+}
+
+.text-field svg {
+    position: absolute;
+    right: -2px;
+    bottom: -4px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%,-50%);
+    transform-origin: center;
+}
+
+
+.text-field input{
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--sidebar-bottom-dark);
+    background: var(--sidebar-bottom-dark);
+    color: var(--main-body-light);
+    height: 50px;
+    max-width: 100%;
+    width: 100%;
+    letter-spacing: .03rem;
+    outline: none;
+    transition: .25s;
+    border-radius: 8px;
+    text-indent: 20px;
+    margin-top: 1rem;
+}
+
+.text-field input::placeholder {
+    color: var(--main-body-light);
+    font-size: 15px;
+}
+
+.text-field input:focus::placeholder {
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.5s, font-size 0.3s, opacity 0.3s;
 }
 
 .form-wrapper {
     display: flex;
     flex-direction: column;
-    position: relative;
-    gap: 30px;
-    background-color: var(--main-body-dark);
-    border: 1px solid var(--main-body-dark);
-    border-radius: 16px;
-    box-shadow: var(--box-shadow);
-    min-width: 280px;
-    max-width: 100%;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    gap: 0.5rem;
 }
 
-.text-field input {
-    color: var(--background-white);
-    font-size: 1rem;
-    font-weight: 500;
-    max-width: 30%;
-    width: 100%;
-    /* width: 100%; */
-    border: 1.5px solid var(--sidebar-bottom-dark);
-    height: 50px;
-    letter-spacing: .03rem;
-    background-color: var(--sidebar-bottom-dark);
-    outline: none;
-    transition: .25s;
-    border-radius: 15px;
-    text-indent: 20px;
-    margin-top: 8px;
+.text-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
 }
 
-.text-field input::placeholder {
-    color: var(--main-body-light);
-    font-size: 14px;
+@media (max-width: 768px) {
+    .register-wrapper {
+        margin-left: 0px;
+    }
 }
