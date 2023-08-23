@@ -1,9 +1,17 @@
+import {Routes, Route} from "react-router-dom";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Register from "./pages/Register/Register";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <Routes>
+        <Route path="/" Component={Login}/>
+        <Route path="/dashboard" Component={Dashboard}/>
+        <Route path="/register" Component={Register} />
+      </Routes>
     </div>
   );
 }
