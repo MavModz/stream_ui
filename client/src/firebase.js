@@ -14,8 +14,3 @@ const auth = getAuth(app)
 const provider = new GoogleAuthProvider();
 
 export {auth, provider};
-
-const auth= getAuth(app);
-const provider=new GoogleAuthProvider();
-
-export {auth, provider};

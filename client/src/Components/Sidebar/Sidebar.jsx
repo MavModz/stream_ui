@@ -1,56 +1,72 @@
 import React from 'react';
-import logo from "../assets/logo.png"
-import "./Sidebar.css"
-import { LayoutDashboard, User, LogOut, Wallet} from "lucide-react"
-import { Link } from 'react-router-dom';
+import { LayoutDashboard, Wallet2, User, LogOut } from "lucide-react";
+import { Link } from "react-router-dom";
+import './Sidebar.css';
 
+function Sidebar() {
 
-const Sidebar  =() => {
-    const handlelogout = (() => {
-        window.location.replace("/");
-    })
+    const sidebarLinks = [
+        {
+            icon: <LayoutDashboard size={26} strokeWidth={1.5} />,
+            title: "Dashboard",
+            link: "/dashboard",
+        },
+        {
+            icon: <Wallet2 size={26} strokeWidth={1.5} />,
+            title: "Wallet",
+            link: "/login",
+        },
+        {
+            icon: <User size={26} strokeWidth={1.5} />,
+            title: "Profile",
+            link: "/register",
+        },
+        {
+            icon: <LogOut size={26} strokeWidth={1.5} />,
+            title: "Logout",
+            link: "/logout",
+        },
+
+    ];
+
     return (
+        // <aside>
+        //     <div className="sidebar-container top-0 left-0 fixed bg-blue-500 w-[16vw] h-screen">
+        //         <h2 className='text-xl text-white flex justify-center'>Sidebar</h2>
+        //         <div className="sidebar-links flex flex-col gap-10 mt-10 w-full">
+        //             {sidebarLinks.map((link, index) => (
+        //                 <Link key={index} to={link.link} className={`sidebar-wrapper flex items-center gap-3 w-full rounded-tl-2xl rounded-bl-2xl ${window.location.pathname === link.link ? "active" : ""}`}>
+        //                     <b></b>
+        //                     <b></b>
+        //                     {link.icon}
+        //                     <span className="text-white text-lg" onClick={link.onClick}>
+        //                         {link.title}
+        //                     </span>
+        //                 </Link>
+        //             ))}
+        //         </div>
+        //     </div>
+        // </aside>
 
-        <div className="drawer" id='border'>
-            <div className="logo-wrapper" id='logo'>
-                <img src={logo} alt="logo" className='logo2' />
-
-
+        <aside>
+            <div className="sidebar-container top-0 left-0 fixed bg-blue-500 w-[16vw] h-screen">
+                <h2 className='text-xl text-white flex justify-center'>Sidebar</h2>
+                <div className="sidebar-links flex flex-col gap-10 mt-10 w-full">
+                    {sidebarLinks.map((link, index) => (
+                        <Link key={index} to={link.link} className={`sidebar-wrapper flex items-center w-full rounded-tl-2xl rounded-bl-2xl ${window.location.pathname === link.link ? "active" : ""}`}>
+                            <b></b>
+                            <b></b>
+                            <div className="icon-and-link flex items-center gap-3 pl-5">
+                                {link.icon}
+                                <span className="text-white text-lg" onClick={link.onClick}>
+                                    {link.title}
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
             </div>
-            <div className="drawer-menu">
-
-                {/* DASHBOARD LINK OPEN */}
-
-                <div className='drawer-links'>
-                    <LayoutDashboard color="#3574F2" />
-                    <Link to={"/dashboard"} className='text' id='word'> Dashboard</Link>
-                </div>
-                {/* DASHBOARD LINK CLOSE */}
-
-                {/* PROFILE LINK OPEN */}
-                <div className='drawer-links'>
-                    <User color="#3574F2" />
-                    <Link to={"/register"} className='text' id='word'> Proflie</Link>
-                </div>
-                {/* PROFILE LINK CLOSE */}
-
-                {/* CHECKOUT LINK OPEN */}
-                <div className='drawer-links'>
-                    <Wallet color="#3574F2" />
-                    <Link to={"/checkout"} className='text' id='word'> Checkout</Link>
-                </div>
-                {/* CHECKOUT LINK CLOSE */}
-
-                {/* LOGOUT LINK OPEN */}
-                <div className='drawer-links'>
-                    <LogOut color="#3574F2" />
-                    <Link to={"/logout"} className='text' id="word" onClick={handlelogout}> Logout</Link>
-                </div>
-                {/* LOGUOT LINK CLOSE */}
-            </div>
-
-        </div>
-
+        </aside>
 
     )
 }
